@@ -15,6 +15,34 @@ Projenin temel amacı; homojen ve maliyetli pazarlama kampanyaları yerine, her 
 *   **Veri Seti:** +400.000 satırlık anonimize edilmiş KOBİ POS işlem verisi.
 *   **Kümeleme:** Müşteriler; Yenilik (Recency), Sıklık (Frequency) ve Parasal Değer (Monetary) metrikleri üzerinden Python ile 10 farklı davranışsal segmente ayrılmıştır.
 *   **Konsantrasyon Analizi:** Geleneksel 80/20 Pareto kuralının aksine, portföyde "Müşterilerin %40'ının, Cironun %60'ını" getirdiği tespit edilmiş ve bankanın "Konsantrasyon Riski"nin düşük olduğu kanıtlanmıştır.
+*   İlgili analiz sonucunda elde edilen tablolar aşağıdadır..
+*   ### Proje Çıktısı: RFM Segmentasyon Tablosu
+Aşağıdaki tablo, KOBİ portföyünün RFM skorlarına göre nasıl dağıldığını göstermektedir:
+
+| Segment | Kişi Sayısı | Ortalama Yenilik (Recency) | Ortalama Sıklık (Frequency) | Ortalama Ciro (Monetary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Şampiyonlar | 361 | 1.00 | 134.70 | 976.160 TL |
+| Sadık Müşteriler | 714 | 1.00 | 132.78 | 984.336 TL |
+| Potansiyel Sadıklar | 720 | 1.00 | 70.52 | 516.160 TL |
+| Umut Verenler | 169 | 1.00 | 38.48 | 251.758 TL |
+| Yeni Müşteriler | 184 | 1.00 | 37.78 | 235.245 TL |
+| Dikkat Gerekenler | 171 | 1.00 | 81.58 | 623.842 TL |
+| Uyku Adayları | 381 | 1.00 | 48.09 | 351.888 TL |
+| Uyuyanlar | 702 | 19.08 | 46.36 | 386.730 TL |
+| Riskli | 721 | 3.07 | 98.08 | 866.116 TL |
+| Kaybedilemez | 377 | 2.45 | 164.11 | 1.533.403 TL |
+
+### Pareto Analizi (80/20 Konsantrasyon Testi)
+Portföyün gelir konsantrasyonu incelendiğinde, geleneksel 80/20 kuralının aksine daha tabana yayılmış ve konsantrasyon riski düşük bir yapı tespit edilmiştir:
+
+| Odak Segmentler | Müşteri İçindeki Payı (%) | Toplam Ciro İçindeki Payı (%) |
+| :--- | :--- | :--- |
+| Sadık Müşteriler | % 16.5 | % 21.77 |
+| Riskli KOBİ'ler | % 16.6 | % 19.34 |
+| Kaybedilemez KOBİ'ler | % 8.7 | % 17.91 |
+| **Toplam (Kritik Kitle)** | **% 41.8** | **% 59.02** |
+
+> *Çıkarım: Portföydeki müşterilerin ~%42'si, bankanın KOBİ POS cirosunun ~%60'ını oluşturmaktadır. Bu durum banka için pozitif bir risk dağılımına işaret eder.*
 
 ## 💼 Segment Bazlı P&L Stratejileri
 
@@ -41,3 +69,10 @@ Aylık 1.000.000 TL ciro yapan bir Şampiyon KOBİ senaryosunda stratejimizin fi
 ## 🛠️ Teknik Altyapı
 *   **Dil:** Python
 *   **Kütüphaneler:** Pandas (Veri manipülasyonu), NumPy, Matplotlib & Seaborn (Görselleştirme)
+*   ---
+### 📂 Proje Kodları ve Veri Seti Hakkında Bilgilendirme
+Bu analizde kullanılan veri temizleme, RFM skorlaması ve segmentasyon işlemlerinin tüm teknik altyapısına ait **Python (Jupyter Notebook)** kodlarına doğrudan repoda bulunan dosya üzerinden erişebilirsiniz. 
+
+👉 **[Jupyter Notebook Kodlarını İncelemek İçin Tıklayınız](https://github.com/salur-yasamali/sme-dynamic-casa-optimization/blob/main/SME_Dynamic_CASA_Analysis.ipynb)**
+
+*(Not: Veri seti bankacılık gizlilik ve KVKK kuralları gereği anonimize edilmiştir.)*
