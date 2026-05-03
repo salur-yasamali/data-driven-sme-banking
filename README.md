@@ -33,16 +33,17 @@ Aşağıdaki tablo, KOBİ portföyünün RFM skorlarına göre nasıl dağıldı
 | Kaybedilemez | 377 | 2.45 | 164.11 | 1.533.403 TL |
 
 ### Pareto Analizi (80/20 Konsantrasyon Testi)
-Portföyün gelir konsantrasyonu incelendiğinde, geleneksel 80/20 kuralının aksine daha tabana yayılmış ve konsantrasyon riski düşük bir yapı tespit edilmiştir:
+Portföyün gelir konsantrasyonu incelendiğinde, geleneksel 80/20 kuralının aksine daha tabana yayılmış ve konsantrasyon riski düşük bir yapı tespit edilmiştir. Ana taşıyıcı kolonlar şöyledir:
 
 | Odak Segmentler | Müşteri İçindeki Payı (%) | Toplam Ciro İçindeki Payı (%) |
 | :--- | :--- | :--- |
-| Sadık Müşteriler | % 16.5 | % 21.77 |
-| Riskli KOBİ'ler | % 16.6 | % 19.34 |
-| Kaybedilemez KOBİ'ler | % 8.7 | % 17.91 |
-| **Toplam (Kritik Kitle)** | **% 41.8** | **% 59.02** |
+| **Şampiyonlar** | **% 8.0** | **% 10.8** |
+| Sadık Müşteriler | % 16.5 | % 21.8 |
+| Riskli KOBİ'ler | % 16.6 | % 19.3 |
+| Kaybedilemez KOBİ'ler | % 8.7 | % 17.9 |
+| **Toplam (Kritik Kitle)** | **% 49.8** | **% 69.8** |
 
-> *Çıkarım: Portföydeki müşterilerin ~%42'si, bankanın KOBİ POS cirosunun ~%60'ını oluşturmaktadır. Bu durum banka için pozitif bir risk dağılımına işaret eder.*
+> *Çıkarım: Portföydeki müşterilerin ~%50'si, bankanın KOBİ POS cirosunun ~%70'ini oluşturmaktadır. Geriye kalan %50'lik kitle (uyuyanlar, yeniler vb.) ise cironun sadece %30'unu getirmektedir. Bu durum banka için hem pozitif bir risk dağılımına işaret eder hem de kârlılık ve sadakat stratejilerinde odaklanılması gereken ana kitleyi netleştirir.*
 
 ## 💼 Segment Bazlı P&L Stratejileri
 
@@ -72,7 +73,5 @@ Aylık 1.000.000 TL ciro yapan bir Şampiyon KOBİ senaryosunda stratejimizin fi
 *   ---
 ### 📂 Proje Kodları ve Veri Seti Hakkında Bilgilendirme
 Bu analizde kullanılan veri temizleme, RFM skorlaması ve segmentasyon işlemlerinin tüm teknik altyapısına ait **Python (Jupyter Notebook)** kodlarına doğrudan repoda bulunan dosya üzerinden erişebilirsiniz. 
-
-👉 **[Jupyter Notebook Kodlarını İncelemek İçin Tıklayınız](https://github.com/salur-yasamali/sme-dynamic-casa-optimization/blob/main/SME_Dynamic_CASA_Analysis.ipynb)**
 
 *(Not: Veri seti bankacılık gizlilik ve KVKK kuralları gereği anonimize edilmiştir.)*
